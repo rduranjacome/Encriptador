@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/f944a1936b.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="titulo">
+        <p>CÓDIGO OCULTO</p>
+      </div>
+    </header>
+    <main>
+      <div class="mensaje-a-encriptar">
+        <textarea
+          id="mensaje"
+          cols="50"
+          rows="15"
+          placeholder="Escribe tu mensaje aqui..."
+          onkeypress="return (event.charCode >= 32 && event.charCode <= 64) || (event.charCode >= 91 && event.charCode <= 128) || (event.charCode = 164) || (event.charCode = 168)"
+        ></textarea>
+        <div class="nota">
+          <p>
+            <i class="fa-solid fa-circle-exclamation"></i>Sólo letras minúsculas
+            y sin acentos
+          </p>
+        </div>
+        <div class="botones-mensaje">
+          <button id="boton-encriptar">Encriptar</button>
+          <button id="boton-desencriptar">Desencriptar</button>
+          <button id="boton-borrar">Borrar</button>
+        </div>
+      </div>
+      <div class="mensaje-encriptado">
+        <textarea
+          id="transcripcion"
+          cols="30"
+          rows="15"
+          placeholder="No se encontró ningun mensaje"
+          readonly
+        ></textarea>
+        <div class="boton-copiar">
+          <button id="boton-copiar-mensaje">Copiar</button>
+          <button id="boton-pegar-mensaje">Insertar Transcripción</button>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="./encripcion.js"></script>
+</html>

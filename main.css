@@ -1,0 +1,225 @@
+html {
+  font-family: "inter", sans-serif;
+}
+
+.titulo {
+  padding: 15px 0 15px 0;
+  background-color: white;
+  color: #2a4632;
+  font-weight: bold;
+  text-align: center;
+}
+
+body {
+  width: 100%;
+  background-color: #d9e8dd;
+}
+
+main {
+  width: 100%;
+}
+
+.mensaje-a-encriptar {
+  height: 700px;
+  width: 100%;
+  padding: 10px 0 10px 0;
+  margin-bottom: 30px;
+}
+
+.nota {
+  margin: 0 0 10px 25px;
+}
+
+.nota i {
+  margin-right: 8px;
+}
+
+.nota p {
+  font-size: 13px;
+}
+
+.mensaje-encriptado {
+  height: 700px;
+  width: 90%;
+  margin: 0 auto 30px auto;
+  padding: 10px 0 5px 0;
+  background-color: white;
+  border-radius: 32px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+textarea {
+  resize: none;
+  width: 80%;
+  height: 80%;
+  display: block;
+  margin: 10px auto 10px auto;
+}
+
+.mensaje-a-encriptar textarea,
+.mensaje-encriptado textarea {
+  background: none;
+  border: none;
+  outline: none;
+  font-family: "inter", sans-serif;
+  font-size: 15px;
+}
+
+.mensaje-a-encriptar textarea {
+  color: #213627;
+}
+
+.mensaje-a-encriptar textarea::placeholder {
+  font-size: 15px;
+}
+
+.mensaje-encriptado textarea {
+  color: #2a4632;
+}
+
+.boton-copiar {
+  margin-top: 35px;
+}
+
+.botones-mensaje button,
+.boton-copiar button {
+  display: block;
+  width: 75%;
+  margin: 0 auto 5px auto;
+  padding: 5px;
+  font-family: "inter", sans-serif;
+  border-radius: 24px;
+  border: none;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.botones-mensaje button {
+  background-color: white;
+  color: #2a4632;
+}
+
+.boton-copiar button {
+  background-color: #2a4632;
+  color: white;
+}
+
+.botones-mensaje button:hover {
+  background-color: #2a4632;
+  color: white;
+}
+
+.boton-copiar button:hover {
+  background-color: white;
+  color: #2a4632;
+}
+
+@media (min-width: 760px) {
+  .mensaje-a-encriptar textarea,
+  .mensaje-encriptado textarea {
+    font-size: 18px;
+  }
+
+  .mensaje-a-encriptar textarea::placeholder {
+    font-size: 20px;
+  }
+
+  .botones-mensaje,
+  .boton-copiar {
+    display: flex;
+  }
+
+  .botones-mensaje button,
+  .boton-copiar button {
+    width: 210px;
+    padding: 20px;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 920px) {
+  .titulo {
+    padding: 30px;
+    font-size: 24px;
+  }
+
+  body {
+    width: 100%;
+  }
+
+  main {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .mensaje-a-encriptar {
+    height: 800px;
+    width: 60%;
+    margin-top: 30px;
+  }
+
+  .mensaje-encriptado {
+    height: 800px;
+    width: 30%;
+    margin: 30px 40px 0 0;
+  }
+
+  .mensaje-a-encriptar textarea,
+  .mensaje-encriptado textarea {
+    font-size: 20px;
+  }
+
+  .mensaje-a-encriptar textarea {
+    height: 76%;
+    margin-bottom: 30px;
+  }
+
+  .mensaje-a-encriptar textarea::placeholder {
+    font-size: 20px;
+  }
+
+  .mensaje-encriptado textarea {
+    height: 75%;
+  }
+
+  .nota {
+    margin-left: 70px;
+    margin-bottom: 20px;
+  }
+
+  .nota p {
+    font-size: 15px;
+  }
+
+  .botones-mensaje {
+    display: flex;
+  }
+
+  .boton-copiar {
+    display: block;
+  }
+
+  .botones-mensaje button {
+    width: 220px;
+    padding: 20px;
+    font-size: 18px;
+  }
+
+  .mensaje-encriptado textarea {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .mensaje-encriptado textarea {
+    height: 80%;
+  }
+  .boton-copiar {
+    display: flex;
+  }
+  .botones-mensaje button,
+  .boton-copiar button {
+    width: 250px;
+    padding: 20px;
+    font-size: 18px;
+  }
+}
