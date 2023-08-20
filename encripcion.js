@@ -5,7 +5,20 @@ const botonCopiar = document.getElementById("boton-copiar-mensaje");
 const botonPegar = document.getElementById("boton-pegar-mensaje");
 const botonBorrar = document.getElementById("boton-borrar");
 const mostrarMensajeEncriptado = document.getElementById("transcripcion");
-//const areaMensaje = document.getElementById("mensaje");
+
+const input = document.getElementById("mensaje");
+input.addEventListener("keypress", function (event) {
+  let key = event.key;
+  //caracteres permitidos utilizando regular expression
+  let regex = new RegExp("^[a-z0-9ñ\\s]+$");
+
+  // Checar si la key está dentro del regex
+  if (!regex.test(key)) {
+    // Prevenir input que no esté dentro de la regex
+    event.preventDefault();
+    return false;
+  }
+});
 
 //Obtener el texto del cuadro principal, necesario para las funciones de encriptar y desencriptar
 function obtenerTexto() {
