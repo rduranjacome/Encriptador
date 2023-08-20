@@ -8,6 +8,7 @@ html {
   color: #2a4632;
   font-weight: bold;
   text-align: center;
+  font-size: 24px;
 }
 
 body {
@@ -20,7 +21,7 @@ main {
 }
 
 .mensaje-a-encriptar {
-  height: 700px;
+  height: 600px;
   width: 100%;
   padding: 10px 0 10px 0;
   margin-bottom: 30px;
@@ -39,9 +40,9 @@ main {
 }
 
 .mensaje-encriptado {
-  height: 700px;
+  height: 600px;
   width: 90%;
-  margin: 0 auto 30px auto;
+  margin: 50px auto 30px auto;
   padding: 10px 0 5px 0;
   background-color: white;
   border-radius: 32px;
@@ -62,7 +63,7 @@ textarea {
   border: none;
   outline: none;
   font-family: "inter", sans-serif;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 .mensaje-a-encriptar textarea {
@@ -70,7 +71,7 @@ textarea {
 }
 
 .mensaje-a-encriptar textarea::placeholder {
-  font-size: 15px;
+  font-size: 20px;
 }
 
 .mensaje-encriptado textarea {
@@ -88,6 +89,7 @@ textarea {
   margin: 0 auto 5px auto;
   padding: 5px;
   font-family: "inter", sans-serif;
+  font-size: 18px;
   border-radius: 24px;
   border: none;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -103,12 +105,12 @@ textarea {
   color: white;
 }
 
-.botones-mensaje button:hover {
+.botones-mensaje button:active {
   background-color: #2a4632;
   color: white;
 }
 
-.boton-copiar button:hover {
+.boton-copiar button:active {
   background-color: white;
   color: #2a4632;
 }
@@ -116,7 +118,7 @@ textarea {
 @media (min-width: 760px) {
   .mensaje-a-encriptar textarea,
   .mensaje-encriptado textarea {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .mensaje-a-encriptar textarea::placeholder {
@@ -132,14 +134,24 @@ textarea {
   .boton-copiar button {
     width: 210px;
     padding: 20px;
-    font-size: 16px;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 910px) {
+  .mensaje-a-encriptar textarea,
+  .mensaje-encriptado textarea {
+    font-size: 28px;
+  }
+
+  .mensaje-a-encriptar textarea::placeholder {
+    font-size: 28px;
   }
 }
 
 @media (min-width: 920px) {
   .titulo {
-    padding: 30px;
-    font-size: 24px;
+    padding: 18px;
   }
 
   body {
@@ -152,13 +164,13 @@ textarea {
   }
 
   .mensaje-a-encriptar {
-    height: 800px;
+    height: 680px;
     width: 60%;
     margin-top: 30px;
   }
 
   .mensaje-encriptado {
-    height: 800px;
+    height: 680px;
     width: 30%;
     margin: 30px 40px 0 0;
   }
@@ -179,6 +191,7 @@ textarea {
 
   .mensaje-encriptado textarea {
     height: 75%;
+    margin-bottom: 70px;
   }
 
   .nota {
@@ -195,7 +208,7 @@ textarea {
   }
 
   .boton-copiar {
-    display: block;
+    display: flex;
   }
 
   .botones-mensaje button {
@@ -204,22 +217,88 @@ textarea {
     font-size: 18px;
   }
 
+  .boton-copiar button {
+    width: 40%;
+  }
+}
+
+@media (min-width: 1020px) {
+  .mensaje-a-encriptar,
+  .mensaje-encriptado {
+    height: 470px;
+  }
+
+  .mensaje-encriptado {
+    width: 35%;
+  }
+
+  .mensaje-a-encriptar textarea,
   .mensaje-encriptado textarea {
-    margin-bottom: 20px;
+    font-size: 16px;
+  }
+
+  .mensaje-a-encriptar textarea::placeholder {
+    font-size: 16px;
+  }
+
+  .botones-mensaje button,
+  .boton-copiar button {
+    padding: 5px;
+    width: 150px;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .mensaje-a-encriptar,
+  .mensaje-encriptado {
+    height: 650px;
+  }
+
+  .mensaje-a-encriptar textarea,
+  .mensaje-encriptado textarea {
+    font-size: 18px;
+  }
+
+  .mensaje-a-encriptar textarea::placeholder {
+    font-size: 18px;
+  }
+
+  .botones-mensaje button,
+  .boton-copiar button {
+    padding: 15px;
+    width: 200px;
+    font-size: 18px;
   }
 }
 
 @media (min-width: 1440px) {
+  .mensaje-a-encriptar,
+  .mensaje-encriptado {
+    height: 580px;
+  }
+
   .mensaje-encriptado textarea {
     height: 80%;
+    margin-bottom: 20px;
   }
   .boton-copiar {
     display: flex;
   }
   .botones-mensaje button,
   .boton-copiar button {
-    width: 250px;
-    padding: 20px;
+    width: 200px;
+    padding: 15px;
     font-size: 18px;
+  }
+
+  .botones-mensaje button:hover {
+    background-color: #2a4632;
+    color: white;
+  }
+
+  .boton-copiar button:hover {
+    background-color: white;
+    color: #2a4632;
   }
 }

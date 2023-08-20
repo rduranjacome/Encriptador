@@ -46,6 +46,7 @@ function copiar() {
   mostrarMensajeEncriptado.select();
   mostrarMensajeEncriptado.setSelectionRange(0, 99999);
   navigator.clipboard.writeText(mostrarMensajeEncriptado.value);
+  alert("Mensaje copiado en el portapeles");
 }
 
 botonCopiar.addEventListener("click", copiar);
